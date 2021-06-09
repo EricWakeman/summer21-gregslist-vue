@@ -1,8 +1,17 @@
 <template>
-  <div v-if="car">
-    <Car :car="car">
-    </car>
+  <div class="container-fluid" v-if="car">
+    <div class="row h-75">
+      <div class="col-12">
+        <img :src="car.imgUrl" alt="Current Car" class="img-fluid">
+      </div>
+    </div>
+    <div class="row h-25">
+      <div class="col-12">
+        <h1>{{ car.make }} {{ car.model }}</h1>
+      </div>
+    </div>
   </div>
+
   <div v-else>
     loading....
   </div>
